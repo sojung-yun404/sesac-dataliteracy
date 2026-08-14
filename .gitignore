@@ -1,0 +1,18 @@
+# 강의 원본 데이터 (저작권상 저장소에 포함하지 않음)
+*.xlsx
+*.xls
+
+# 파이썬
+.venv/
+__pycache__/
+*.pyc
+
+# 작업 중 생성되는 임시 파일
+daily_tmp.csv
+.fig_tmp.png
+
+# Claude Code 로컬 설정 (개인 경로 포함)
+.claude/settings.local.json
+
+# macOS
+.DS_Store
