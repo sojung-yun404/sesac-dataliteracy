@@ -2,7 +2,7 @@
 
 새싹캠퍼스 데이터 리터러시 과정 실습. 2023년 1~3월 저지시티 Citi Bike 대여 기록 **13,696건**을 탐색적 데이터 분석(EDA)한 기록이다.
 
-📊 **[분석 리포트 보기](https://claude.ai/code/artifact/21535435-3d13-4cec-83f1-59fd74413d10)**
+📊 **[분석 리포트 보기](https://sojung-yun404.github.io/sesac-dataliteracy/)**
 
 ---
 
@@ -34,6 +34,17 @@
 `eda_common.py` — 공통 로더와 클리닝(요일 접두사 제거, 정비소 기록 제외)
 `report_figs.py` — 리포트용 차트 4장
 `inline_figs.py` — 이미지를 base64로 리포트 HTML에 삽입
+
+## 리포트 빌드
+
+`report_src.html`이 원본이고, 이미지 자리에 `FIG:파일명.png` 플레이스홀더가 들어 있다.
+아래 명령이 이미지를 base64로 심어 `docs/index.html`을 만든다 — 외부 파일 없이 혼자 열리는 한 장짜리 HTML이다.
+
+```bash
+.venv/bin/python inline_figs.py report_src.html docs/index.html --standalone
+```
+
+차트를 다시 그렸으면 `report_figs.py`를 먼저 실행한 뒤 이 명령을 돌리면 리포트가 갱신된다.
 
 ---
 
